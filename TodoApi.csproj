@@ -11,13 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Database\Database.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\Services\Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Database\TodoApi.Database.csproj" />
+    <ProjectReference Include="..\Models\TodoApi.Models.csproj" />
+    <ProjectReference Include="..\Services\TodoApi.Services.csproj" />
   </ItemGroup>
 
 </Project>

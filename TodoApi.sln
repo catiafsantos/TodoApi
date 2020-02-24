@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi.csproj", "{BEF93A46-B4C1-4716-B0E4-8F3F5298E736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "..\Database\Database.csproj", "{62F8A6BD-FA8C-4B52-9311-3877A67A7A02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi.Database", "..\Database\TodoApi.Database.csproj", "{62F8A6BD-FA8C-4B52-9311-3877A67A7A02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\Services\Services.csproj", "{0BF65762-0CCC-41F9-9B9B-8CF3CE4ECA2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi.Services", "..\Services\TodoApi.Services.csproj", "{0BF65762-0CCC-41F9-9B9B-8CF3CE4ECA2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{86348C91-1F30-4CFD-BA41-D7C722F89DAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi.Models", "..\Models\TodoApi.Models.csproj", "{86348C91-1F30-4CFD-BA41-D7C722F89DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
