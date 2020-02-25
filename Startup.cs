@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TodoApi.Models;
+using TodoApi.Services;
 
 namespace TodoApi
 {
@@ -24,6 +24,7 @@ namespace TodoApi
         {
             services.AddDbContext<Models.TodoContext>(opt =>
                 opt.UseInMemoryDatabase("TodoList"));
+            services.AddTransient<ITodoService, TodoService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

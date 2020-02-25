@@ -1,25 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using TodoApi.Models;
+using TodoApi.Services;
 
 namespace TodoApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/todo")]
     public class TodoController : ControllerBase
     {
-        private readonly TodoContext _context;
+        private readonly ITodoService _todoService;
 
-        public TodoController(TodoContext context)
+        public TodoController(ITodoService todoService)
         {
-            _context = context;
+            _todoService = todoService;
 
-            if (_context.TodoItems.Count() == 0)
-            {
-                // Create a new TodoItem if collection is empty,
-                // which means you can't delete all TodoItems.
-                _context.TodoItems.Add(new TodoItem { Name = "Item1" });
-                _context.SaveChanges();
-            }
         }
     }
 }
