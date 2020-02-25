@@ -23,21 +23,21 @@ namespace TodoApi.Controllers
         }
 
         [HttpPut("{Id}")]
-        public ActionResult<ActionResult<TaskModel>> Update([FromBody] TaskModel taskItem)
+        public ActionResult Update([FromBody] TaskModel taskItem)
         {
             _todoService.Update(Id, taskItem);
             return XXXX;
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] TaskModel taskItem)
+        public ActionResult Create([FromBody] TaskModel taskItem)
         {
             _todoService.Create(taskItem);
             return XXXX;
         }
 
         [HttpDelete("{Id}")]
-        public IActionResult Delete(long Id)
+        public ActionResult Delete(long Id)
         {
             _todoService.Delete(Id);
             return XXXX;
