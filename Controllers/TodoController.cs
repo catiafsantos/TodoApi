@@ -25,22 +25,22 @@ namespace TodoApi.Controllers
         [HttpPut("{Id}")]
         public ActionResult<ActionResult<TaskModel>> Update([FromBody] TaskModel taskItem)
         {
-            var result = _todoService.Update(taskItem);
-            return IActionResult;
+            _todoService.Update(Id, taskItem);
+            return XXXX;
         }
 
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] TaskModel taskItem)
         {
-                _todoService.Create(taskItem);
-
+            _todoService.Create(taskItem);
+            return XXXX;
         }
 
         [HttpDelete("{Id}")]
         public IActionResult Delete(long Id)
         {
-            var result = _todoService.Delete(Id);
-            return result.IsValid ? Ok() : (IActionResult)BadRequest(result.Message);
+            _todoService.Delete(Id);
+            return XXXX;
 
         }
 
