@@ -17,30 +17,36 @@ namespace TodoApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<TaskModel>> Get()
+        public IEnumerable<TaskModel> Get()
         {
-            return _todoService.TaskModel;
+            return _todoService.Get();
         }
 
-        [HttpPut("{Id}")]
-        public ActionResult Update([FromBody] TaskModel taskItem)
+        [HttpGet("{id}")]
+        public ActionResult<TaskModel> Get(long id)
         {
-            _todoService.Update(Id, taskItem);
-            return XXXX;
+            return _todoService.Get(id);
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult Update(long id, [FromBody] TaskModel taskItem)
+        {
+            _todoService.Update(id, taskItem);
+            return NoContent();
         }
 
         [HttpPost]
         public ActionResult Create([FromBody] TaskModel taskItem)
         {
-            _todoService.Create(taskItem);
-            return XXXX;
+            var result = _todoService.Create(taskItem);
+            return Created($"{Request.Path}/{result}",result);
         }
 
-        [HttpDelete("{Id}")]
-        public ActionResult Delete(long Id)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(long id)
         {
-            _todoService.Delete(Id);
-            return XXXX;
+            _todoService.Delete(id);
+            return NoContent();
 
         }
 
